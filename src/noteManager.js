@@ -12,8 +12,8 @@ NoteManager.prototype.storeNote = function(note){
   this._noteList.push(note);
 };
 
-NoteManager.prototype.getNote = function(){
-  return this._noteList[this._noteList.length - 1];
+NoteManager.prototype.getNote = function(index){
+  return this._noteList[index];
 };
 
 NoteManager.prototype.noteList = function(){
