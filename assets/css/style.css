@@ -1,8 +1,4 @@
 body {
   background: -webkit-linear-gradient(to right, #ddd6f3, #faaca8);
-  background: linear-gradient(to right, #ddd6f3, #faaca8); 
-}
-
-#note-form {
-  border: 1px solid red;
+  background: linear-gradient(to right, #ddd6f3, #faaca8);
 }
