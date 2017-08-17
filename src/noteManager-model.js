@@ -4,7 +4,6 @@ function NoteManager(){
 
 NoteManager.prototype.createNote = function(noteContent){
   var newNote = new Note(noteContent);
-  console.log(newNote);
   this.storeNote(newNote);
 };
 
