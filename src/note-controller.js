@@ -1,20 +1,19 @@
 (function(exports){
-  function NoteController() {
-    this._noteManager = new noteManager();
+  function NoteController(noteManagerInstance) {
+    this._noteManager = new noteManagerInstance();
   }
 
   NoteController.prototype = {
     displayList: function() {
       var noteList = this._noteManager.noteList();
       var noteListTitles = [];
-      notelist.forEach(function(element){
-        noteListTitles.push(element._title());
+      console.log(noteList);
+      noteList.forEach(function(element){
+        noteListTitles.push(element._title);
       });
-    noteListView.toHtml(noteListTitles);
+    return noteListView.toHtml(noteListTitles);
     }
   };
 
   exports.NoteController = NoteController;
 })(this);
-
-NoteController.display();
