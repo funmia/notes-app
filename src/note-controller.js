@@ -6,9 +6,11 @@
   NoteController.prototype = {
     displayList: function() {
       var noteList = this._noteManager.noteList();
-      notelist.foreach(function(element){
-      noteView.toHtml(element._title());
-    });
+      var noteListTitles = [];
+      notelist.forEach(function(element){
+        noteListTitles.push(element._title());
+      });
+    noteListView.toHtml(noteListTitles);
     }
   };
 
