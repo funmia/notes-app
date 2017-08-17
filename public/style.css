@@ -1,0 +1,4 @@
+form#note-form {
+  visibility: hidden;
+  border: 1px solid red;
+}
