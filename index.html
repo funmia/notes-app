@@ -6,23 +6,20 @@
     <title>Note App</title>
   </head>
   <body>
-    <p>Hello</p>
+      <p>Hello</p>
 
-    <nav class="nav">
+      <nav class="nav">
 
-        <button onclick="showForm()" class="nav-form-submit">Add a note </button>
+          <button onclick="showForm()" class="nav-form-submit">Add a note </button>
 
-    </nav>
+      </nav>
 
-    <main>
-      <form id="note-form">
-        <input type="text">
-        <input type="submit" name="content" value="Save Note">
-      </form>
-    </main>
-
-    <ul><li>Across the centuries...</li><li>Across the fenturies...</li><li>Across the jenturies...</li><li>Across the xenturies...</li></ul>
-
+      <main>
+        <form id="note-form" style="visibility: hidden;">
+          <textarea name="notecontent" rows="10" cols="14"></textarea>
+          <input type="submit" name="content" value="Save Note">
+        </form>
+      </main>
     <script src= "src/form-view.js" type="text/javascript"></script>
   </body>
 </html>
