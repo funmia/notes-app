@@ -1,6 +1,6 @@
 function Note(content){
   this._content = content;
-  this._title = this.generateTitle(content) + '...';
+  this._title = this.generateTitle(content);
 }
 
 Note.prototype.displayContent = function() {
@@ -8,7 +8,7 @@ Note.prototype.displayContent = function() {
 };
 
 Note.prototype.generateTitle = function(content) {
-  return content.substr(0, 20);
+  return content.substr(0, 20) + '...';
 };
 
 Note.prototype.displayTitle = function() {
