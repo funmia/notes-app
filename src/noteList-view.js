@@ -4,17 +4,14 @@
   }
 
   NoteListView.prototype = {
-    toHtml: function(arrayToPrint){
+    toHtml: function(noteArray){
       var outputHtml = "<ul>";
-      arrayToPrint.forEach(function(item){
-        outputHtml += "<li>" + item + "</li>";
+      noteArray.forEach(function(note){
+        var noteUrl = note.id();
+        console.log(noteUrl)
+        outputHtml += "<li> <a href='/#note"+noteUrl+"'>" + note.displayTitle() + "</a> </li>";
       });
-
-
-      console.log(this._listElement.innerHTML);
-
       this._listElement.innerHTML = (outputHtml + "</ul>");
-      console.log(this._listElement.innerHTML);
     }
   };
   exports.NoteListView = NoteListView;
