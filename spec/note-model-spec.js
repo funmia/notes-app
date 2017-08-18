@@ -12,3 +12,7 @@ it('has a content', function(){
 it('has a title', function(){
   return expect(note1.displayTitle()).toEqual("Across the centuries...");
 });
+
+it('has an id', function(){
+  return expect(note1.id()).toEqual(1);
+});
