@@ -13,12 +13,14 @@
 
     displayList: function() {
       var noteList = this._noteManager.noteList();
-      // var noteListTitles = [];
-      // noteList.forEach(function(element){
-      //   noteListTitles.push(element._title);
-      // });
       this._noteListView.toHtml(noteList);
+    },
+
+    displayNote: function(noteId) {
+      var note = this._noteManager.getNoteById(noteId);
+      console.log(note);
     }
+
   };
 
   exports.NoteController = NoteController;
