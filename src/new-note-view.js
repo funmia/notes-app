@@ -7,6 +7,14 @@ function showForm() {
     noteForm.style.visibility = 'hidden';
   }
 }
+ // document.getElementById('note-form').addEventListener("submit", function(event) {
+ //   console.log(event);
+ //   console.log(event.target.elements["0"].value);
+ //   event.preventDefault();
+ // });
+
+
+
 
 // To be implemented when NoteController is ready.
 //
