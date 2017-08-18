@@ -1,5 +1,5 @@
-var listElement = document.getElementById("note-list");
-var noteController = new NoteController(NoteManager, NoteListView, listElement);
+var outputElement = document.getElementById("output-element");
+var noteController = new NoteController(NoteManager, NoteListView, SingleNoteView, outputElement);
 
 
 document.getElementById('note-form').addEventListener("submit", function(event) {

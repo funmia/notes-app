@@ -1,7 +1,8 @@
 (function(exports){
-  function NoteController(noteManagerModel, noteListView, listElement) {
+  function NoteController(noteManagerModel, noteListView, singleNoteView, outputElement) {
     this._noteManager = new noteManagerModel();
-    this._noteListView = new noteListView(listElement);
+    this._noteListView = new noteListView(outputElement);
+    this._singleNoteView = new singleNoteView(outputElement);
   }
 
   NoteController.prototype = {
@@ -18,7 +19,7 @@
 
     displayNote: function(noteId) {
       var note = this._noteManager.getNoteById(noteId);
-      console.log(note);
+      this._singleNoteView.toHtml(note);
     }
 
   };

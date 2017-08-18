@@ -8,7 +8,6 @@
       var outputHtml = "<ul>";
       noteArray.forEach(function(note){
         var noteUrl = note.id();
-        console.log(noteUrl)
         outputHtml += "<li> <a href='/#"+noteUrl+"'>" + note.displayTitle() + "</a> </li>";
       });
       this._listElement.innerHTML = (outputHtml + "</ul>");
