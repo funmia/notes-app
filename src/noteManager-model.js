@@ -11,8 +11,11 @@ NoteManager.prototype.storeNote = function(note){
   this._noteList.push(note);
 };
 
-NoteManager.prototype.getNote = function(index){
-  return this._noteList[index];
+NoteManager.prototype.getNoteById = function(noteId){
+  var foundNote = this._noteList.find(function(note) {
+    return note.id() == noteId;
+  });
+  return foundNote;
 };
 
 NoteManager.prototype.noteList = function(){
